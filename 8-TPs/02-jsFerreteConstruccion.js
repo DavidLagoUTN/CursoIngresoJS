@@ -18,7 +18,7 @@ function Rectangulo ()
     largoRectanguloParseado = parseInt(largoRectangulo);
     anchoRectanguloParseado = parseInt(anchoRectangulo);
 
-    cantidadDeAlambre = largoRectanguloParseado * 2 * anchoRectanguloParseado * 2 * 3;
+    cantidadDeAlambre = (largoRectanguloParseado * 2 + anchoRectanguloParseado * 2) * 3;
     alert("Se necesitan " + cantidadDeAlambre + " metros de alambre para el terreno rectangular de 3 hilos.");
 }
 function Circulo () 
