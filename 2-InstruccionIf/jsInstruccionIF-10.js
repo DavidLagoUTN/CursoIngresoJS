@@ -1,6 +1,26 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");
+	var numeroAleatorioEntreUnoYDiez;
+	var numeroAleatorioEntreUnoYDiezParseado;
 
-}//FIN DE LA FUNCIÓN
+	numeroAleatorioEntreUnoYDiez = Math.random()*10 +1;
+	numeroAleatorioEntreUnoYDiezParseado = parseInt(numeroAleatorioEntreUnoYDiez);
+
+	if (numeroAleatorioEntreUnoYDiezParseado <9)
+	{
+		if (numeroAleatorioEntreUnoYDiezParseado <4)
+		{
+			alert(numeroAleatorioEntreUnoYDiezParseado + " Vamos, la proxima se puede");
+		}
+		else
+		{
+			alert(numeroAleatorioEntreUnoYDiezParseado + " APROBÓ");
+		}
+	}
+	else
+	{
+		alert(numeroAleatorioEntreUnoYDiezParseado + " EXCELENTE");
+	}
+
+	
+}
