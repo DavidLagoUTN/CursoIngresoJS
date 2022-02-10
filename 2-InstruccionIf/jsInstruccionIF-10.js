@@ -1,25 +1,29 @@
 function mostrar()
 {
-	var numeroAleatorioEntreUnoYDiez;
-	var numeroAleatorioEntreUnoYDiezParseado;
+	var numeroAleatorio;
+	var numeroAleatorioParseado;
 
-	numeroAleatorioEntreUnoYDiez = Math.random()*10 +1;
-	numeroAleatorioEntreUnoYDiezParseado = parseInt(numeroAleatorioEntreUnoYDiez);
+	numeroAleatorio = Math.random()*20 +1;
+	numeroAleatorioParseado = parseInt(numeroAleatorio);
 
-	if (numeroAleatorioEntreUnoYDiezParseado <9)
+	if (numeroAleatorioParseado <11)
 	{
-		if (numeroAleatorioEntreUnoYDiezParseado <4)
+		if (numeroAleatorioParseado <9)
 		{
-			alert(numeroAleatorioEntreUnoYDiezParseado + " Vamos, la proxima se puede");
+			if (numeroAleatorioParseado <4)
+			{
+				alert(numeroAleatorioParseado + " Vamos, la proxima se puede");
+			}
+			
+			else
+			{
+				alert(numeroAleatorioParseado + " APROBÓ");
+			}
 		}
 		else
 		{
-			alert(numeroAleatorioEntreUnoYDiezParseado + " APROBÓ");
+		alert(numeroAleatorioParseado + " EXCELENTE");
 		}
-	}
-	else
-	{
-		alert(numeroAleatorioEntreUnoYDiezParseado + " EXCELENTE");
 	}
 
 	

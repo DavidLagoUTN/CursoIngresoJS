@@ -1,10 +1,13 @@
 function mostrar()
 {
-	var numeroAleatorioEntreUnoYDiez;
-	var numeroAleatorioEntreUnoYDiezParseado;
+	var numeroAleatorio;
+	var numeroAleatorioParseado;
 
-	numeroAleatorioEntreUnoYDiez = Math.random()*10 +1;
-	numeroAleatorioEntreUnoYDiezParseado = parseInt(numeroAleatorioEntreUnoYDiez);
+	numeroAleatorio = Math.random()*20 +1;
+	numeroAleatorioParseado = parseInt(numeroAleatorio);
 
-	alert(numeroAleatorioEntreUnoYDiezParseado);
+	if (numeroAleatorioParseado <11)
+	{
+		alert(numeroAleatorioParseado);
+	}
 }
