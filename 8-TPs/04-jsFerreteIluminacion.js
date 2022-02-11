@@ -8,7 +8,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-
+/*
 function CalcularPrecio () 
 {
     var precioDeLamparita;
@@ -82,6 +82,136 @@ function CalcularPrecio ()
             }
         }
     }
+    precioDeLamparitas = precioDeLamparita * cantidadDeLamparitasParseada;
+    precioFinal = precioDeLamparitas - precioDeLamparitas * porcentajeDeDescuento /100;
+    if (precioFinal > 120)
+    {
+        impuestoIngresosBrutos = precioFinal * 10/100;
+        precioFinal = precioFinal + impuestoIngresosBrutos;
+        alert("Usted pagó $"+ impuestoIngresosBrutos +" de IIBB.");
+    }
+    document.getElementById("txtIdprecioDescuento").value = precioFinal;
+}
+*/
+
+//Por marcas:
+
+function CalcularPrecio () 
+{
+    var precioDeLamparita;
+    var porcentajeDeDescuento;
+    var cantidadDeLamparitas;
+    var cantidadDeLamparitasParseada;
+    var marcaDeLamparitas;
+    var precioDeLamparitas;
+    var precioFinal;
+    var impuestoIngresosBrutos;
+
+    precioDeLamparita = 35;
+    cantidadDeLamparitas = document.getElementById("txtIdCantidad").value;
+    cantidadDeLamparitasParseada = parseInt(cantidadDeLamparitas);
+    marcaDeLamparitas = document.getElementById("Marca").value;
+
+    if (marcaDeLamparitas == "ArgentinaLuz")
+    {
+        if (cantidadDeLamparitasParseada >= 6)
+        {
+            porcentajeDeDescuento = 50;
+        }
+        else
+        {
+            if (cantidadDeLamparitasParseada == 5)
+            {
+                porcentajeDeDescuento = 40;
+            }
+            else
+            {
+                if (cantidadDeLamparitasParseada == 4)
+                {
+                    porcentajeDeDescuento = 25;
+                }
+                else
+                {
+                    if (cantidadDeLamparitasParseada == 3)
+                    {
+                        porcentajeDeDescuento = 15;
+                    }
+                    else
+                    {
+                        porcentajeDeDescuento = 0;
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        if (marcaDeLamparitas == "FelipeLamparas")
+        {
+            if (cantidadDeLamparitasParseada >= 6)
+            {
+                porcentajeDeDescuento = 50;
+            }
+            else
+            {
+                if (cantidadDeLamparitasParseada == 5)
+                {
+                    porcentajeDeDescuento = 30;
+                }
+                else
+                {
+                    if (cantidadDeLamparitasParseada == 4)
+                    {
+                        porcentajeDeDescuento = 25;
+                    }
+                    else
+                    {
+                        if (cantidadDeLamparitasParseada == 3)
+                        {
+                            porcentajeDeDescuento = 10;
+                        }
+                        else
+                        {
+                            porcentajeDeDescuento = 0;
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (cantidadDeLamparitasParseada >= 6)
+            {
+                porcentajeDeDescuento = 50;
+            }
+            else
+            {
+                if (cantidadDeLamparitasParseada == 5)
+                {
+                    porcentajeDeDescuento = 30;
+                }
+                else
+                {
+                    if (cantidadDeLamparitasParseada == 4)
+                    {
+                        porcentajeDeDescuento = 20;
+                    }
+                    else
+                    {
+                        if (cantidadDeLamparitasParseada == 3)
+                        {
+                            porcentajeDeDescuento = 5;
+                        }
+                        else
+                        {
+                            porcentajeDeDescuento = 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     precioDeLamparitas = precioDeLamparita * cantidadDeLamparitasParseada;
     precioFinal = precioDeLamparitas - precioDeLamparitas * porcentajeDeDescuento /100;
     if (precioFinal > 120)
