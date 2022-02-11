@@ -25,7 +25,11 @@ function CalcularPrecio ()
     cantidadDeLamparitasParseada = parseInt(cantidadDeLamparitas);
     marcaDeLamparitas = document.getElementById("Marca").value;
 
-    if (cantidadDeLamparitasParseada < 6)
+    if (cantidadDeLamparitasParseada >= 6)
+    {
+        porcentajeDeDescuento = 50;
+    }
+    else
     {
         if (cantidadDeLamparitasParseada == 5)
         {
@@ -38,43 +42,45 @@ function CalcularPrecio ()
                 porcentajeDeDescuento = 30;
             }
         }
-        if (cantidadDeLamparitasParseada == 4)
+        else
         {
-            if (marcaDeLamparitas == "ArgentinaLuz" || marcaDeLamparitas == "FelipeLamparas")
+            if (cantidadDeLamparitasParseada == 4)
             {
-                porcentajeDeDescuento = 25;
-            }
-            else
-            {
-                porcentajeDeDescuento = 20;
-            }
-        }
-        if (cantidadDeLamparitasParseada == 3)
-        {
-            if (marcaDeLamparitas == "ArgentinaLuz")
-            {
-                porcentajeDeDescuento = 15;
-            }
-            else
-            {
-                if (marcaDeLamparitas == "FelipeLamparas")
+                if (marcaDeLamparitas == "ArgentinaLuz" || marcaDeLamparitas == "FelipeLamparas")
                 {
-                    porcentajeDeDescuento = 10;
+                    porcentajeDeDescuento = 25;
                 }
                 else
                 {
-                    porcentajeDeDescuento = 5;
+                    porcentajeDeDescuento = 20;
+                }
+            }
+            else
+            {
+                if (cantidadDeLamparitasParseada == 3)
+                {
+                    if (marcaDeLamparitas == "ArgentinaLuz")
+                    {
+                        porcentajeDeDescuento = 15;
+                    }
+                    else
+                    {
+                        if (marcaDeLamparitas == "FelipeLamparas")
+                        {
+                            porcentajeDeDescuento = 10;
+                        }
+                        else
+                        {
+                            porcentajeDeDescuento = 5;
+                        }
+                    }
+                }
+                else
+                {
+                    porcentajeDeDescuento = 0;
                 }
             }
         }
-        if (cantidadDeLamparitasParseada < 3)
-        {
-            porcentajeDeDescuento = 0;
-        }
-    }
-    else
-    {
-        porcentajeDeDescuento = 50;
     }
     precioDeLamparitas = precioDeLamparita * cantidadDeLamparitasParseada;
     precioFinal = precioDeLamparitas - precioDeLamparitas * porcentajeDeDescuento /100;
@@ -82,7 +88,7 @@ function CalcularPrecio ()
     {
         impuestoIngresosBrutos = precioFinal * 10/100;
         precioFinal = precioFinal + impuestoIngresosBrutos;
-        alert("Usted pagó $"+ impuestoIngresosBrutos +" de IIBB.")
+        alert("Usted pagó $"+ impuestoIngresosBrutos +" de IIBB.");
     }
     document.getElementById("txtIdprecioDescuento").value = precioFinal;
 }
