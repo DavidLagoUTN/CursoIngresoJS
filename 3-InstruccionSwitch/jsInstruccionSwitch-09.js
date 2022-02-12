@@ -5,6 +5,7 @@ function mostrar()
 	var estacion;
 	var mensajePrecioFinal;
 	var tarifa;
+	var porcentajeDeAumentoODescuento;
 
 	destino = document.getElementById("txtIdDestino").value;
 	estacion = document.getElementById("txtIdEstacion").value;
@@ -17,13 +18,13 @@ function mostrar()
 			switch(destino)
 			{
 				case "Bariloche":
-					tarifa = tarifa + 20*tarifa/100;
+					porcentajeDeAumentoODescuento = 20;
 					break;
 				case "Mar del plata":
-					tarifa = tarifa - 20*tarifa/100;
+					porcentajeDeAumentoODescuento = -20;
 					break;
 				default:	//Cataratas y Córdoba.
-				tarifa = tarifa - 10*tarifa/100;
+					porcentajeDeAumentoODescuento = -10;
 					break;
 			}
 			break;
@@ -32,13 +33,13 @@ function mostrar()
 			switch(destino)
 			{
 				case "Bariloche":
-					tarifa = tarifa - 20*tarifa/100;
+					porcentajeDeAumentoODescuento = -20;
 					break;
 				case "Mar del plata":
-					tarifa = tarifa + 20*tarifa/100;
+					porcentajeDeAumentoODescuento = 20;
 					break;
 				default:	//Cataratas y Córdoba.
-				tarifa = tarifa + 10*tarifa/100;
+					porcentajeDeAumentoODescuento = 10;
 					break;
 			}
 			break;
@@ -49,10 +50,15 @@ function mostrar()
 				case "Bariloche":
 				case "Cataratas":
 				case "Mar del plata":
-					tarifa = tarifa + 10*tarifa/100;
-					break;	// No hago nada con Cordoba porque no tiene aumento ni descuento en esta estación.
+					porcentajeDeAumentoODescuento = 10;
+					break;
+				default:	//Córdoba.
+					porcentajeDeAumentoODescuento = 0;
+					break;
 			}
 			break;
 	}
-	alert(mensajePrecioFinal + tarifa + " para el destino " + destino + " durante la estación de " + estacion + ". Gracias.");
+	tarifa = tarifa + tarifa*porcentajeDeAumentoODescuento/100;
+	mensajePrecioFinal = mensajePrecioFinal + tarifa + " para el destino " + destino + " durante la estación de " + estacion + ". Gracias.";
+	alert(mensajePrecioFinal);
 }//FIN DE LA FUNCIÓN
