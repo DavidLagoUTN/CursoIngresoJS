@@ -12,7 +12,7 @@ b) el importe total a pagar con descuento(solo si corresponde)
 c) Informar el tipo con mas cantidad de bolsas.
 d) El tipo mas caro 
 */
-/*
+
 
 function mostrar()
 {
@@ -189,7 +189,7 @@ function mostrar()
 
     document.write("d)El tipo más caro es:"+tipoMasCaro+".")
 }
-*/
+
 
 
 
@@ -288,6 +288,14 @@ function mostrar()
 }
 
 */
+
+
+
+
+
+
+
+
 
 /*
 2. La empresa SILKEY necesita liquidar las comisiones de sus 3 vendedores para la zona sur de GBA.
@@ -444,6 +452,16 @@ function mostrar()
 }
 */
 
+
+
+
+
+
+
+
+
+
+
 /*
 3. De los 10 empleados de una PYME se ingresan los siguientes datos:
 Nombre y apellido
@@ -465,7 +483,7 @@ d. Mostrar el total de dinero que deberá pagar la PYME en concepto de asignacio
 */
 
 
-
+/*
 function mostrar()
 {
     var contadorEmpleados;
@@ -581,3 +599,5 @@ function mostrar()
     document.write("<br>d) Total de dinero que deberá pagar la PYME en concepto de asignaciones: $"+conceptoAsignaciones+".");
 
 }
+
+*/

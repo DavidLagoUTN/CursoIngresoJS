@@ -10,7 +10,6 @@ d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de t
 e) El promedio de edad entre los hombres solteros.
 */
 
-
 function mostrar()
 {
 	var nombreIngresado;
